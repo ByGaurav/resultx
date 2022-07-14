@@ -418,5 +418,5 @@ analysis = pd.concat([qpi,df_count,df_pass,df_fail,\
                       df_A1,df_A2,df_B1,df_B2,df_C1,df_C2,df_D1,df_D2],axis=1,sort=False)
 st.dataframe(analysis.fillna(0).astype(str))
 
-st.info("Copyright Mr. Gaurav Gupta.")
+st.info("Disclaimer: Programmer is not responsible for any error in the analysis or results obtained by this program.")
 st.stop()
