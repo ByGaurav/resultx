@@ -264,7 +264,7 @@ if not df_comp.empty:
   st.dataframe(df_comp.astype(str))
 
 #Calculating Failures
-df_fail = df.loc[df['RESULT'] == 'FAIL']
+df_fail = df.loc[df['RESULT'] == 'ESSENTIAL']
 if not df_fail.empty:
   st.write('Failure: ',len(df_fail.index))
   st.dataframe(df_fail.astype(str))
@@ -418,5 +418,5 @@ analysis = pd.concat([qpi,df_count,df_pass,df_fail,\
                       df_A1,df_A2,df_B1,df_B2,df_C1,df_C2,df_D1,df_D2],axis=1,sort=False)
 st.dataframe(analysis.fillna(0).astype(str))
 
-st.info("Disclaimer: Programmer is not responsible for any error in the analysis or results obtained by this program")
+st.info("Disclaimer: Programmer is not responsible for any error in the analysis or results obtained by this program.")
 st.stop()
